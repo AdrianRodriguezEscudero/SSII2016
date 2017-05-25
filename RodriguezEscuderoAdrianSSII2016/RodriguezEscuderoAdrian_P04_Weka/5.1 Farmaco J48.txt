@@ -1,0 +1,78 @@
+=== Run information ===
+
+Scheme:weka.classifiers.trees.J48 -C 0.25 -M 2
+Relation:     FARMACO1n
+Instances:    200
+Attributes:   7
+              Edad
+              Sexo
+              TA
+              Colesterol
+              Na
+              K
+              Farmaco
+Test mode:evaluate on training data
+
+=== Classifier model (full training set) ===
+
+J48 pruned tree
+------------------
+
+K <= 0.055221
+|   K <= 0.037124: farmacoY (56.0)
+|   K > 0.037124
+|   |   Na <= 0.685143
+|   |   |   TA = ALTA
+|   |   |   |   Na <= 0.656371: farmacoA (6.0)
+|   |   |   |   Na > 0.656371: farmacoY (2.0/1.0)
+|   |   |   TA = BAJA
+|   |   |   |   Sexo = M: farmacoC (3.0)
+|   |   |   |   Sexo = H: farmacoX (4.0/1.0)
+|   |   |   TA = NORMAL: farmacoX (11.0/1.0)
+|   |   Na > 0.685143: farmacoY (33.0/2.0)
+K > 0.055221
+|   TA = ALTA
+|   |   Edad <= 50: farmacoA (17.0)
+|   |   Edad > 50: farmacoB (15.0)
+|   TA = BAJA
+|   |   Colesterol = ALTO: farmacoC (14.0/1.0)
+|   |   Colesterol = NORMAL: farmacoX (13.0)
+|   TA = NORMAL: farmacoX (26.0)
+
+Number of Leaves  : 	12
+
+Size of the tree : 	21
+
+
+Time taken to build model: 0.02 seconds
+
+=== Evaluation on training set ===
+=== Summary ===
+
+Correctly Classified Instances         194               97      %
+Incorrectly Classified Instances         6                3      %
+Kappa statistic                          0.9568
+Mean absolute error                      0.0199
+Root mean squared error                  0.0997
+Relative absolute error                  7.1292 %
+Root relative squared error             26.749  %
+Total Number of Instances              200     
+
+=== Detailed Accuracy By Class ===
+
+               TP Rate   FP Rate   Precision   Recall  F-Measure   ROC Area  Class
+                 0.967     0.028      0.967     0.967     0.967      0.993    farmacoY
+                 1         0.005      0.941     1         0.97       0.998    farmacoC
+                 0.963     0.014      0.963     0.963     0.963      0.994    farmacoX
+                 1         0          1         1         1          1        farmacoA
+                 0.938     0          1         0.938     0.968      1        farmacoB
+Weighted Avg.    0.97      0.017      0.97      0.97      0.97       0.995
+
+=== Confusion Matrix ===
+
+  a  b  c  d  e   <-- classified as
+ 88  1  2  0  0 |  a = farmacoY
+  0 16  0  0  0 |  b = farmacoC
+  2  0 52  0  0 |  c = farmacoX
+  0  0  0 23  0 |  d = farmacoA
+  1  0  0  0 15 |  e = farmacoB

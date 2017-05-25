@@ -1,0 +1,98 @@
+=== Run information ===
+
+Scheme:weka.classifiers.bayes.NaiveBayes 
+Relation:     FARMACO1n-weka.filters.unsupervised.attribute.AddExpression-Ea5/a6-NNa_vs_K
+Instances:    200
+Attributes:   8
+              Edad
+              Sexo
+              TA
+              Colesterol
+              Na
+              K
+              Farmaco
+              Na_vs_K
+Test mode:10-fold cross-validation
+
+=== Classifier model (full training set) ===
+
+Naive Bayes Classifier
+
+                  Class
+Attribute      farmacoY farmacoC farmacoX farmacoA farmacoB
+                 (0.45)   (0.08)   (0.27)   (0.12)   (0.08)
+============================================================
+Edad
+  mean           43.7637  42.6696  44.0159   35.913  62.4241
+  std. dev.      16.9209  16.2024  16.2836   9.5704   6.9338
+  weight sum          91       16       54       23       16
+  precision       1.0536   1.0536   1.0536   1.0536   1.0536
+
+Sexo
+  M                 48.0      8.0     28.0     10.0      7.0
+  H                 45.0     10.0     28.0     15.0     11.0
+  [total]           93.0     18.0     56.0     25.0     18.0
+
+TA
+  ALTA              39.0      1.0      1.0     24.0     17.0
+  BAJA              31.0     17.0     19.0      1.0      1.0
+  NORMAL            24.0      1.0     37.0      1.0      1.0
+  [total]           94.0     19.0     57.0     26.0     19.0
+
+Colesterol
+  ALTO              48.0     17.0     21.0     13.0      9.0
+  NORMAL            45.0      1.0     35.0     12.0      9.0
+  [total]           93.0     18.0     56.0     25.0     18.0
+
+Na
+  mean            0.7309   0.6754   0.6522   0.6623   0.7279
+  std. dev.       0.1161   0.1106    0.112   0.1216   0.0833
+  weight sum          91       16       54       23       16
+  precision        0.002    0.002    0.002    0.002    0.002
+
+K
+  mean            0.0347   0.0647   0.0628   0.0619   0.0641
+  std. dev.       0.0099   0.0101   0.0114   0.0114   0.0087
+  weight sum          91       16       54       23       16
+  precision       0.0003   0.0003   0.0003   0.0003   0.0003
+
+Na_vs_K
+  mean           22.3664  10.6359  10.6534  10.9202  11.5498
+  std. dev.       6.0285   1.9846   2.1718   1.9831   1.8241
+  weight sum          91       16       54       23       16
+  precision       0.1607   0.1607   0.1607   0.1607   0.1607
+
+
+
+Time taken to build model: 0 seconds
+
+=== Stratified cross-validation ===
+=== Summary ===
+
+Correctly Classified Instances         182               91      %
+Incorrectly Classified Instances        18                9      %
+Kappa statistic                          0.8699
+Mean absolute error                      0.065 
+Root mean squared error                  0.1605
+Relative absolute error                 23.3159 %
+Root relative squared error             43.0526 %
+Total Number of Instances              200     
+
+=== Detailed Accuracy By Class ===
+
+               TP Rate   FP Rate   Precision   Recall  F-Measure   ROC Area  Class
+                 0.956     0.055      0.935     0.956     0.946      0.994    farmacoY
+                 0.75      0.011      0.857     0.75      0.8        0.977    farmacoC
+                 0.889     0.034      0.906     0.889     0.897      0.991    farmacoX
+                 0.87      0.006      0.952     0.87      0.909      0.998    farmacoA
+                 0.938     0.022      0.789     0.938     0.857      0.998    farmacoB
+Weighted Avg.    0.91      0.038      0.911     0.91      0.91       0.992
+
+=== Confusion Matrix ===
+
+  a  b  c  d  e   <-- classified as
+ 87  2  1  0  1 |  a = farmacoY
+  1 12  3  0  0 |  b = farmacoC
+  4  0 48  0  2 |  c = farmacoX
+  1  0  1 20  1 |  d = farmacoA
+  0  0  0  1 15 |  e = farmacoB

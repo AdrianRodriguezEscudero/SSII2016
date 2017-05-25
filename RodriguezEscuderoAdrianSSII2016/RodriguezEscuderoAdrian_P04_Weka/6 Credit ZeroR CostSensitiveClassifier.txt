@@ -1,0 +1,75 @@
+=== Run information ===
+
+Scheme:weka.classifiers.meta.CostSensitiveClassifier -cost-matrix "[0.0 1.0; 5.0 0.0]" -S 1 -W weka.classifiers.rules.ZeroR
+Relation:     german_credit
+Instances:    1000
+Attributes:   21
+              checking_status
+              duration
+              credit_history
+              purpose
+              credit_amount
+              savings_status
+              employment
+              installment_commitment
+              personal_status
+              other_parties
+              residence_since
+              property_magnitude
+              age
+              other_payment_plans
+              housing
+              existing_credits
+              job
+              num_dependents
+              own_telephone
+              foreign_worker
+              class
+Test mode:10-fold cross-validation
+Evaluation cost matrix:
+ 0 1
+ 5 0
+
+
+=== Classifier model (full training set) ===
+
+CostSensitiveClassifier using reweighted training instances
+
+weka.classifiers.rules.ZeroR 
+
+Classifier Model
+ZeroR predicts class value: bad
+
+Cost Matrix
+ 0 1
+ 5 0
+
+
+Time taken to build model: 0.02 seconds
+
+=== Stratified cross-validation ===
+=== Summary ===
+
+Correctly Classified Instances         300               30      %
+Incorrectly Classified Instances       700               70      %
+Kappa statistic                          0     
+Total Cost                             700     
+Average Cost                             0.7   
+Mean absolute error                      0.5726
+Root mean squared error                  0.5962
+Relative absolute error                136.2677 %
+Root relative squared error            130.1057 %
+Total Number of Instances             1000     
+
+=== Detailed Accuracy By Class ===
+
+               TP Rate   FP Rate   Precision   Recall  F-Measure   ROC Area  Class
+                 0         0          0         0         0          0.5      good
+                 1         1          0.3       1         0.462      0.5      bad
+Weighted Avg.    0.3       0.3        0.09      0.3       0.138      0.5  
+
+=== Confusion Matrix ===
+
+   a   b   <-- classified as
+   0 700 |   a = good
+   0 300 |   b = bad

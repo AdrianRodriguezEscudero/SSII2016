@@ -1,0 +1,30 @@
+=== Run information ===
+
+Evaluator:    weka.attributeSelection.WrapperSubsetEval -B weka.classifiers.bayes.NaiveBayes -F 5 -T 0.01 -R 1 --
+Search:weka.attributeSelection.ExhaustiveSearch 
+Relation:     FARMACO1n-weka.filters.unsupervised.attribute.AddExpression-Ea5/a6-NNa_vs_K
+Instances:    200
+Attributes:   8
+              Edad
+              Sexo
+              TA
+              Colesterol
+              Na
+              K
+              Farmaco
+              Na_vs_K
+Evaluation mode:10-fold cross-validation
+
+
+
+=== Attribute selection 10 fold cross-validation (stratified), seed: 1 ===
+
+number of folds (%)  attribute
+          10(100 %)    1 Edad
+           0(  0 %)    2 Sexo
+          10(100 %)    3 TA
+          10(100 %)    4 Colesterol
+           0(  0 %)    5 Na
+           0(  0 %)    6 K
+          10(100 %)    8 Na_vs_K
+

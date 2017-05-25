@@ -1,0 +1,54 @@
+=== Run information ===
+
+Scheme:weka.clusterers.SimpleKMeans -N 3 -A "weka.core.EuclideanDistance -R first-last" -I 500 -S 10
+Relation:     empleados.txt-weka.filters.unsupervised.attribute.Remove-R1
+Instances:    15
+Attributes:   9
+              Sueldo 
+              Casado
+              Coche
+              Hijos
+              Alq/Prop
+              Sindic.
+              Bajas/Año
+              Antigüedad
+              Sexo
+Test mode:evaluate on training data
+
+=== Model and evaluation on training set ===
+
+
+kMeans
+======
+
+Number of iterations: 3
+Within cluster sum of squared errors: 17.61279643369798
+Missing values globally replaced with mean/mode
+
+Cluster centroids:
+                          Cluster#
+Attribute     Full Data          0          1          2
+                   (15)        (6)        (5)        (4)
+========================================================
+Sueldo       21066.6667 29166.6667      16600      14500
+Casado               No         No         Sí         Sí
+Coche                Sí         No         Sí         Sí
+Hijos            0.7333     0.1667        1.8       0.25
+Alq/Prop       Alquiler   Alquiler       Prop   Alquiler
+Sindic.              No         Sí         No         No
+Bajas/Año        5.2667     6.1667        3.4       6.25
+Antigüedad          8.2     8.3333        8.4       7.75
+Sexo                  H          M          H          H
+
+
+
+
+Time taken to build model (full training data) : 0.02 seconds
+
+=== Model and evaluation on training set ===
+
+Clustered Instances
+
+0       6 ( 40%)
+1       5 ( 33%)
+2       4 ( 27%)

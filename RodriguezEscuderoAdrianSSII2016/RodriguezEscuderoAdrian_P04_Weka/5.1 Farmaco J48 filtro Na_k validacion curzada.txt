@@ -1,0 +1,69 @@
+=== Run information ===
+
+Scheme:weka.classifiers.trees.J48 -C 0.25 -M 2
+Relation:     FARMACO1n-weka.filters.unsupervised.attribute.AddExpression-Ea5/a6-NNa_vs_K
+Instances:    200
+Attributes:   8
+              Edad
+              Sexo
+              TA
+              Colesterol
+              Na
+              K
+              Farmaco
+              Na_vs_K
+Test mode:10-fold cross-validation
+
+=== Classifier model (full training set) ===
+
+J48 pruned tree
+------------------
+
+Na_vs_K <= 14.641961
+|   TA = ALTA
+|   |   Edad <= 50: farmacoA (23.0)
+|   |   Edad > 50: farmacoB (16.0)
+|   TA = BAJA
+|   |   Colesterol = ALTO: farmacoC (16.0)
+|   |   Colesterol = NORMAL: farmacoX (18.0)
+|   TA = NORMAL: farmacoX (36.0)
+Na_vs_K > 14.641961: farmacoY (91.0)
+
+Number of Leaves  : 	6
+
+Size of the tree : 	10
+
+
+Time taken to build model: 0 seconds
+
+=== Stratified cross-validation ===
+=== Summary ===
+
+Correctly Classified Instances         198               99      %
+Incorrectly Classified Instances         2                1      %
+Kappa statistic                          0.9856
+Mean absolute error                      0.004 
+Root mean squared error                  0.0632
+Relative absolute error                  1.4343 %
+Root relative squared error             16.9673 %
+Total Number of Instances              200     
+
+=== Detailed Accuracy By Class ===
+
+               TP Rate   FP Rate   Precision   Recall  F-Measure   ROC Area  Class
+                 1         0.009      0.989     1         0.995      0.995    farmacoY
+                 1         0          1         1         1          1        farmacoC
+                 0.981     0          1         0.981     0.991      0.991    farmacoX
+                 1         0.006      0.958     1         0.979      0.997    farmacoA
+                 0.938     0          1         0.938     0.968      0.969    farmacoB
+Weighted Avg.    0.99      0.005      0.99      0.99      0.99       0.993
+
+=== Confusion Matrix ===
+
+  a  b  c  d  e   <-- classified as
+ 91  0  0  0  0 |  a = farmacoY
+  0 16  0  0  0 |  b = farmacoC
+  1  0 53  0  0 |  c = farmacoX
+  0  0  0 23  0 |  d = farmacoA
+  0  0  0  1 15 |  e = farmacoB
+

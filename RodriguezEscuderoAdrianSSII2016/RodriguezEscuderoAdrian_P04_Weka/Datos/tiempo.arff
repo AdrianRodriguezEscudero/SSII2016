@@ -1,0 +1,21 @@
+@relation tiempo
+@attribute cielo {soleado, cubierto, lluvioso}
+@attribute temperatura real
+@attribute humedad real
+@attribute viento {VERDADERO, FALSO}
+@attribute jugar {si, no}
+@data
+soleado,85,85,FALSO,no
+soleado,80,90,VERDADERO,no
+cubierto,83,86,FALSO,si
+lluvioso,70,96,FALSO,si
+lluvioso,68,80,FALSO,si
+lluvioso,65,70,VERDADERO,no
+cubierto,64,65,VERDADERO,si
+soleado,72,95,FALSO,no
+soleado,69,70,FALSO,si
+lluvioso,75,80,FALSO,si
+soleado,75,70,VERDADERO,si
+cubierto,72,90,VERDADERO,si
+cubierto,81,75,FALSO,si
+lluvioso,71,91,VERDADERO,no

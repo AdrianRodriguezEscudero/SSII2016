@@ -1,0 +1,52 @@
+=== Run information ===
+
+Scheme:weka.classifiers.rules.ZeroR 
+Relation:     FARMACO1n
+Instances:    200
+Attributes:   7
+              Edad
+              Sexo
+              TA
+              Colesterol
+              Na
+              K
+              Farmaco
+Test mode:evaluate on training data
+
+=== Classifier model (full training set) ===
+
+ZeroR predicts class value: farmacoY
+
+Time taken to build model: 0 seconds
+
+=== Evaluation on training set ===
+=== Summary ===
+
+Correctly Classified Instances          91               45.5    %
+Incorrectly Classified Instances       109               54.5    %
+Kappa statistic                          0     
+Mean absolute error                      0.2787
+Root mean squared error                  0.3726
+Relative absolute error                100      %
+Root relative squared error            100      %
+Total Number of Instances              200     
+
+=== Detailed Accuracy By Class ===
+
+               TP Rate   FP Rate   Precision   Recall  F-Measure   ROC Area  Class
+                 1         1          0.455     1         0.625      0.5      farmacoY
+                 0         0          0         0         0          0.5      farmacoC
+                 0         0          0         0         0          0.5      farmacoX
+                 0         0          0         0         0          0.5      farmacoA
+                 0         0          0         0         0          0.5      farmacoB
+Weighted Avg.    0.455     0.455      0.207     0.455     0.285      0.5  
+
+=== Confusion Matrix ===
+
+  a  b  c  d  e   <-- classified as
+ 91  0  0  0  0 |  a = farmacoY
+ 16  0  0  0  0 |  b = farmacoC
+ 54  0  0  0  0 |  c = farmacoX
+ 23  0  0  0  0 |  d = farmacoA
+ 16  0  0  0  0 |  e = farmacoB
+
